@@ -2,12 +2,17 @@
 <html lang="en" ng-app="flash">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
   <title></title>
 </head>
 <body>
   <section ng-controller="CardController">
 
-    {{cards}}
+
+    <div class="card" ng-repeat="card in cards">
+      <p>{{ card.front }}</p>
+      <p>{{ card.back }}</p>
+    </div>
   </section>
 
 
