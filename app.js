@@ -12,4 +12,8 @@ flashApp.controller("CardController", function ($scope) {
     }
 
   ];
+  $scope.current = 0;
+  $scope.nextCard = function () {
+    $scope.current = ($scope.current+1) % ($scope.cards.length);
+  };
 });
