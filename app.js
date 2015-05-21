@@ -17,6 +17,7 @@ flashApp.controller("DeckController", function ($scope){
     return [].concat(allCards);
   };
 });
+
 flashApp.controller("StudyController", function ($scope) {
 
 
@@ -56,3 +57,5 @@ flashApp.controller("StudyController", function ($scope) {
 
 
 });
+
+flashApp.controller("CardsController", function () {});
