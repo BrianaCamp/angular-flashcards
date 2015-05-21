@@ -1,5 +1,6 @@
 var flashApp = angular.module("flash", []);
-flashApp.controller("CardController", function ($scope) {
+flashApp.controller("DeckController", function (){});
+flashApp.controller("StudyController", function ($scope) {
   var allCards = [
     { front: "1- front",
       back: "2 -back"
