@@ -16,14 +16,13 @@
     </div>
 
     <p ng-if="!cards.length"> No more cards to study, great job! </p>
-    <button ng-click="next()">next</button>
-    <button ng-click="previous()">back</button>
-    <button ng-click="gotIt()">I got it!</button>
+    <span ng-if="cards.length">
+      <button ng-click="next()">next</button>
+      <button ng-click="previous()">back</button>
+      <button ng-click="gotIt()">I got it!</button>
+    </span>
+    <button ng-click="reset()">Reset</button>
   </section>
-
-
-
-
   <script src="app.js"></script>
 </body>
 </html>

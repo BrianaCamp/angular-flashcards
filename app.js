@@ -1,6 +1,6 @@
 var flashApp = angular.module("flash", []);
 flashApp.controller("CardController", function ($scope) {
-  $scope.cards = [
+  var allCards = [
     { front: "1- front",
       back: "2 -back"
     },
@@ -12,8 +12,18 @@ flashApp.controller("CardController", function ($scope) {
     }
 
   ];
-  $scope.current = 0; //card to display
-  $scope.front = true;
+
+  function init() {
+    $scope.cards = [].concat(allCards);
+    $scope.current = 0; //card to display
+    $scope.front = true;
+  }
+
+  init();
+
+  $scope.reset = init;
+
+
 
   $scope.next = function () {
     var step = +(!$scope.front); // change cards if on back
