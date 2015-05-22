@@ -1,3 +1,16 @@
+body {
+  text-align: center;
+}
+
+.parent-wrapper {
+  width: 700px;
+  margin: 0 auto;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2em;
+
+}
+
 .card p {
   display: inline-block;
   border: 2px red solid;
@@ -6,9 +19,65 @@
   text-align:center;
   vertical-align:middle;
   line-height:100px;
+
 }
 
 
 p.back {
   border-color: blue;
+}
+
+.hr {
+  background-image:url("handdrawn-line.gif");
+  background-repeat: repeat-x;
+  height:31px;
+  margin-top:15%;
+}
+.add-cards {
+  margin-top:10%;
+}
+
+label {
+  display:block;
+  margin-top:20px;
+  margin-bottom:5px;
+
+}
+
+textarea {
+  margin-bottom:20px;
+  font-size:1.3rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.add-button {
+  padding:15px 37px;
+  display:block;
+  margin:0 auto;
+  background:#000;
+  color:#fff;
+  font-size:1.3rem;
+  border:none;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.add-button:hover {
+  background:#fff;
+  color:#000;
+  border: 2px solid black;
+
+}
+
+label {
+  text-transform: uppercase;
+}
+
+
+
+.add-cards p {
+  font-size:4rem;
+  font-family:'Amatic SC', cursive;
+
 }
