@@ -1,4 +1,4 @@
-var studyModule = angular.module("flash.controllers.study", []);
+var studyModule = angular.module("flash.study", []);
 
 
 studyModule.controller("StudyController", function ($scope) {

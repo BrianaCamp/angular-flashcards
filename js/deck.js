@@ -1,4 +1,4 @@
-var deckModule = angular.module("flash.controllers.deck", []);
+var deckModule = angular.module("flash.deck", []);
 
 deckModule.controller("DeckController", function ($scope){
   var allCards = [

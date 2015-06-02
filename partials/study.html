@@ -1,0 +1,15 @@
+  <section>
+      <div ng-if="cards.length" class="card">
+        <p ng-if="front" class="front">{{ cards[current].front }}</p>
+        <p ng-if="!front" class="back">{{ cards[current].back }}</p>
+      </div>
+      <p ng-if="!cards.length"> No more cards to study, great job! </p>
+      <span ng-if="cards.length">
+        <button ng-click="next()">next</button>
+        <button ng-click="previous()">back</button>
+        <button ng-click="gotIt()">I got it!</button>
+      </span>
+      <button ng-click="reset()">Reset</button>
+    </section>
+    <!--horizontal row-->
+  <div class="hr"></div>
