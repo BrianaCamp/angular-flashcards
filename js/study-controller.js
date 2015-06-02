@@ -1,39 +1,7 @@
-var flashApp = angular.module("flash", []);
-
-flashApp.controller("DeckController", function ($scope){
-  var allCards = [
-    { front: "1- front",
-      back: "2 -back"
-    },
-    { front: "3 - front",
-      back: "4 - back"
-    },
-    { front: "5 - front",
-      back: "6 - back"
-    }
-
-  ];
-
-  var studyDeck;
-
-  $scope.refreshStudyDeck = function() {
-    studyDeck = [].concat(allCards);
-    return studyDeck;
-  };
-
-  $scope.addCard = function(front, back){
-    var newCard = {front: front, back: back};
-    allCards.push(newCard);
-    studyDeck.push(newCard); //why do we need to use study deck again if it's already being pushed into all cards?
+var studyModule = angular.module("flash.controllers.study", []);
 
 
-  };
-
-
-
-});
-
-flashApp.controller("StudyController", function ($scope) {
+studyModule.controller("StudyController", function ($scope) {
 
 
   function init() {
@@ -69,16 +37,6 @@ flashApp.controller("StudyController", function ($scope) {
     $scope.front = true;
     $scope.cards.splice($scope.current, 1);
     $scope.current = ($scope.current % $scope.cards.length) || 0;
-  };
-
-
-});
-
-flashApp.controller("CardsController", function ($scope) {
-  $scope.addCard = function() {
-    $scope.$parent.addCard($scope.front, $scope.back);
-    $scope.front = "";
-    $scope.back = "";
   };
 
 
