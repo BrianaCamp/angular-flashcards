@@ -15,8 +15,6 @@ studyModule.controller("StudyController", function ($scope) {
 
   $scope.reset = init; //why doesn't this have a parenthesis?
 
-
-
   $scope.next = function () {
     var step = +(!$scope.front); // change cards if on back
     $scope.move(step); //since move is defined below, shouldn't it cause an error?
