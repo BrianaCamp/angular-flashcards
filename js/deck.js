@@ -28,6 +28,8 @@ deckModule.controller("DeckController", function ($scope){
 
   var studyDeck;
 
+  $scope.decks = allDecks;
+
   // var allCards = allDecks[0].cards;
 
   $scope.refreshStudyDeck = function(deckNumber) {
@@ -35,13 +37,11 @@ deckModule.controller("DeckController", function ($scope){
     return studyDeck;
   };
 
-  $scope.addCard = function(front, back){
+  $scope.addCard = function(front, back, index){
     var newCard = {front: front, back: back};
-    allCards.push(newCard);
+    allDecks[index].cards.push(newCard);
     studyDeck.push(newCard); //why do we need to use study deck again if it's already being pushed into all cards?
   };
-
-  $scope.decks = allDecks;
 
 
 
