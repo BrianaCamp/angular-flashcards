@@ -4,7 +4,12 @@ var flashApp = angular.module("flash", [
   "flash.study",
   "flash.cards"
 ]).config(["$routeProvider", function($routeProvider) {
-  $routeProvider.when("/study", {
+  $routeProvider
+  .when("/", {
+    templateUrl: "partials/decks.html",
+
+  })
+    .when("/study/:index", {
     templateUrl: "partials/study.html",
     controller: "StudyController"
   })
