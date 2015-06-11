@@ -4,11 +4,15 @@ var studyModule = angular.module("flash.study", []);
 studyModule.controller("StudyController", ["$scope","$routeParams", function ($scope, $routeParams) {
 
 
+
   function init() {
-    $scope.cards = $scope.decks[$routeParams.index].cards;//with us referencing studydeck, we aren't really using the original data of allCards?
+    $scope.cards = $scope.$parent.refreshStudyDeck($routeParams.index);//with us referencing studydeck, we aren't really using the original data of allCards?
     $scope.current = 0; //card to display
     $scope.front = true;
   }
+
+  $scope.indexNumber = $routeParams.index;
+
 
 
   init();

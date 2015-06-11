@@ -24,12 +24,14 @@ deckModule.controller("DeckController", function ($scope){
     }
   ];
 
+
+
   var studyDeck;
 
-  var allCards = allDecks[0].cards;
+  // var allCards = allDecks[0].cards;
 
-  $scope.refreshStudyDeck = function() {
-    studyDeck = [].concat(allCards);
+  $scope.refreshStudyDeck = function(deckNumber) {
+    studyDeck = [].concat(allDecks[deckNumber].cards);
     return studyDeck;
   };
 
@@ -37,8 +39,6 @@ deckModule.controller("DeckController", function ($scope){
     var newCard = {front: front, back: back};
     allCards.push(newCard);
     studyDeck.push(newCard); //why do we need to use study deck again if it's already being pushed into all cards?
-
-
   };
 
   $scope.decks = allDecks;
