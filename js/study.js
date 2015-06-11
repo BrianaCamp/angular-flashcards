@@ -1,4 +1,4 @@
-var studyModule = angular.module("flash.controllers.study", []);
+var studyModule = angular.module("flash.study", []);
 
 
 studyModule.controller("StudyController", function ($scope) {
@@ -14,8 +14,6 @@ studyModule.controller("StudyController", function ($scope) {
   init();
 
   $scope.reset = init; //why doesn't this have a parenthesis?
-
-
 
   $scope.next = function () {
     var step = +(!$scope.front); // change cards if on back

@@ -4,48 +4,14 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles.css">
   <title></title>
-  <script src="lib/angular.min.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  <script src="./lib/angular.min.js"></script>
+  <script src="./lib/angular-route.min.js"></script>
 </head>
 <body ng-controller="DeckController">
-  <div class="parent-wrapper">
-    <section ng-controller="StudyController">
-      <div ng-if="cards.length" class="card">
-        <p ng-if="front" class="front">{{ cards[current].front }}</p>
-        <p ng-if="!front" class="back">{{ cards[current].back }}</p>
-      </div>
-
-
-
-      <p ng-if="!cards.length"> No more cards to study, great job! </p>
-      <span ng-if="cards.length">
-        <button ng-click="next()">next</button>
-        <button ng-click="previous()">back</button>
-        <button ng-click="gotIt()">I got it!</button>
-      </span>
-      <button ng-click="reset()">Reset</button>
-    </section>
-    <!--horizontal row-->
-  <div class="hr"></div>
-    <!--add card section-->
-    <section class="add-cards" ng-controller="CardsController">
-      <p>make a card</p>
-      <label for="front">Front</label>
-      <textarea name="front" cols="50" rows="3" ng-model="front"></textarea>
-      <label for="back">Back</label>
-      <textarea name="back" cols="50" rows="3" ng-model="back"></textarea>
-      <button ng-click="addCard()" class="add-button">Add</button>
-    </section>
-  </div>
+  <div ng-view></div>
   <script src="./js/app.js"></script>
-  <script src="./js/controllers.js"></script>
-  <script src="./js/deck-controller.js"></script>
-  <script src="./js/card-controller.js"></script>
-  <script src="./js/study-controller.js"></script>
-
-
-
-
+  <script src="./js/deck.js"></script>
+  <script src="./js/cards.js"></script>
+  <script src="./js/study.js"></script>
 </body>
 </html>
